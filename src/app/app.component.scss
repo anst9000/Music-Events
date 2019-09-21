@@ -1,0 +1,34 @@
+$nav_bg: lighten(firebrick, 25);
+$nav_col: darken(white, 10);
+
+nav {
+  background: $nav_bg;
+  color: $nav_col;
+  height: 45px;
+
+  h2 {
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  ul {
+    margin: 0;
+    float: right;
+
+    li {
+      display: inline-block;
+      padding: 10px 20px 10px 20px;
+
+      a {
+        color: $nav_col;
+        cursor: pointer;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+#contentContainer {
+  padding-top: 30px;
+}
