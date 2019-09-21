@@ -2,10 +2,10 @@
   <div class="col-8 offset-2">
     <h2 [routerLink]="['home']">AndyDevApp</h2>
     <ul>
-      <li><a href="#">Add new event</a></li>
-      <li *ngIf="!user"><a href="#">Login</a></li>
+      <li [routerLink]="['event', 'add']"><a>Add new event</a></li>
+      <li *ngIf="!user" [routerLink]="['login']"><a>Login</a></li>
       <li *ngIf="user" (click)="Logout()">
-        <a href="#">Logout: {{ user.username }}</a>
+        <a>Logout: {{ user.username }}</a>
       </li>
     </ul>
   </div>

@@ -1,10 +1,10 @@
-<mat-card>
+<mat-card [routerLink]="['/event', event.id]">
   <img [src]="event.imageSrc" [alt]="event.name" />
   <div class="eventDataContainer">
     <h1 [ngClass]="{ redTitle: event.price > 20 }">{{ addBang(event.name) | uppercase }}</h1>
     <p>{{ event.date | date }}</p>
     <p [ngStyle]="{ color: color }">{{ event.price | priceRange }}</p>
     <p>{{ addBang(event.description) }}</p>
-    <button mat-flat-button color="primary" (click)="emitToParent()">Info</button>
   </div>
+  <div class="overlay"></div>
 </mat-card>

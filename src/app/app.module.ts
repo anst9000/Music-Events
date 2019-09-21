@@ -10,6 +10,9 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { MusicEventListComponent } from './music-event-list/music-event-list.component';
 import { RouterModule } from '@angular/router';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { AddMusicEventComponent } from './add-music-event/add-music-event.component';
+import { MusicEventDetailsComponent } from './music-event-details/music-event-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { RouterModule } from '@angular/router';
     MusicEventComponent,
     PriceRangePipe,
     LoginComponent,
-    MusicEventListComponent
+    MusicEventListComponent,
+    NotfoundComponent,
+    AddMusicEventComponent,
+    MusicEventDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +36,27 @@ import { RouterModule } from '@angular/router';
       {
         path: 'home',
         component: MusicEventListComponent
+      },
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'event/add',
+        component: AddMusicEventComponent
+      },
+      {
+        path: 'event/:id',
+        component: MusicEventDetailsComponent
+      },
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
+      {
+        path: '**',
+        component: NotfoundComponent
       }
     ])
   ],
