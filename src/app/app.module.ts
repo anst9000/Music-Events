@@ -7,7 +7,7 @@ import { MatButtonModule, MatInputModule } from '@angular/material';
 import { MatCardModule } from '@angular/material';
 import { PriceRangePipe } from './price-range.pipe';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MusicEventListComponent } from './music-event-list/music-event-list.component';
 import { RouterModule } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
@@ -32,6 +32,7 @@ import { MusicEventDetailsComponent } from './music-event-details/music-event-de
     MatCardModule,
     MatInputModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {
         path: 'home',

@@ -1,0 +1,31 @@
+mat-card {
+  overflow: auto;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  span {
+    font-size: 11px;
+    color: red;
+  }
+
+  .formButtonContainer {
+    width: 100%;
+
+    button {
+      // float: right;
+      width: 75px;
+      margin-right: 20px;
+    }
+  }
+}
